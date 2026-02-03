@@ -12,16 +12,16 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/" className="hover:opacity-70 transition">
+          <Link href="/calendar" className="hover:opacity-70 transition">
             calendar
           </Link>
-          <Link href="/about" className="hover:opacity-70 transition">
+          <Link href="/gallery" className="hover:opacity-70 transition">
             gallery
           </Link>
-          <Link href="/contact" className="hover:opacity-70 transition">
+          <Link href="/links" className="hover:opacity-70 transition">
             links
           </Link>
-          <Link href="/contact" className="hover:opacity-70 transition">
+          <Link href="/ourteam" className="hover:opacity-70 transition">
             our team
           </Link>
         </div>
