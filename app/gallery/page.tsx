@@ -1,67 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const photos = [
-  {
-    id: 1,
-    src: "/gallery/event1.webp",
-    alt: "Workshop event",
-    caption: "Our first General Body Meeting of the semester!",
-  },
-  {
-    id: 2,
-    src: "/gallery/event1.webp",
-    alt: "Group meeting",
-    caption: "Our first General Body Meeting of the semester!",
-  },
-  {
-    id: 3,
-    src: "/gallery/event1.webp",
-    alt: "Guest speaker",
-    caption: "Our first General Body Meeting of the semester!",
-  },
-  {
-    id: 4,
-    src: "/gallery/event1.webp",
-    alt: "Tabling event",
-    caption: "Our first General Body Meeting of the semester!",
-  },
-  {
-    id: 5,
-    src: "/gallery/event1.webp",
-    alt: "Tabling event",
-    caption: "Our first General Body Meeting of the semester!",
-  },
-  {
-    id: 6,
-    src: "/gallery/event1.webp",
-    alt: "Tabling event",
-    caption: "Our first General Body Meeting of the semester!",
-  },
-  {
-    id: 7,
-    src: "/gallery/event1.webp",
-    alt: "Tabling event",
-    caption: "Our first General Body Meeting of the semester!",
-  },
-  {
-    id: 8,
-    src: "/gallery/event1.webp",
-    alt: "Tabling event",
-    caption: "Our first General Body Meeting of the semester!",
-  },
-  {
-    id: 9,
-    src: "/gallery/event1.webp",
-    alt: "Tabling event",
-    caption: "Our first General Body Meeting of the semester!",
-  },
-];
+interface Photo {
+  id: number;
+  src: string;
+  alt: string;
+  caption: string;
+}
 
 export default function GalleryPage() {
+  const [photos, setPhotos] = useState<Photo[]>([]);
   const [flipped, setFlipped] = useState<number | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/api/gallery')
+      .then(res => res.json())
+      .then((data: Photo[]) => {
+        setPhotos(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Error loading photos:', err);
+        setLoading(false);
+      });
+  }, []);
+
+  if(loading) {
+    return <div className="min-h-screen flex items-center justify-center">Loading Gallery...</div>;
+  }
 
   return (
     <main className="min-h-screen bg-background text-foreground px-6 py-20">
