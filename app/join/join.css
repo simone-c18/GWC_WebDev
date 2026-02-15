@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+    --color-deep-blue: oklch(0.269 0.1129 264.16);
+}

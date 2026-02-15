@@ -24,6 +24,9 @@ export default function Navbar() {
           <Link href="/ourteam" className="hover:opacity-70 transition">
             our team
           </Link>
+          <Link href="/join" className="hover:opacity-70 transition">
+            join
+          </Link>
         </div>
 
         {/* Call to Action */}
