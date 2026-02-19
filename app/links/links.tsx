@@ -3,9 +3,9 @@ const Links = () => {
     <main className="links-page">
       <section className="links-hero">
         <h1>Links to all things GWC!</h1>
-        <p>Support us and join our community!</p>
+        <p>Support us and join our community!!</p>
       </section>
-
+     
       <section className="links-list">
         <ul>
           <li>
@@ -17,7 +17,7 @@ const Links = () => {
 
           <li>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              link
+              link test
             </a>
             <p>link description.</p>
           </li>
