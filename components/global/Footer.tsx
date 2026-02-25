@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 py-10 mt-20">
+    <footer className="w-full bg-gwc-darkblue text-white dark:text-zinc-300 py-10 mt-20">
       <div className="max-w-6xl mx-auto px-6 flex flex-col gap-8 sm:flex-row sm:justify-between sm:items-start">
 
         {/* Left: Logo */}
         <div>
-          <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">
+          <h3 className="text-xl font-semibold text-white">
             Girls Who Code UCF
           </h3>
         </div>
@@ -37,7 +37,7 @@ export default function Footer() {
         <div>
         <Link
           href="/contact"
-          className="hidden md:inline-flex items-center rounded-full bg-foreground px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition"
+          className="hidden md:inline-flex items-center rounded-full bg-gwc-lightblue px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition"
         >
           contact
         </Link>
