@@ -13,7 +13,7 @@ interface Photo {
 export default function GalleryPage() {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [loading, setLoading] = useState(true);
-  const [activeId, setActiveId] = useState<number | null>(null);
+  const [expanded, setExpanded] = useState<Photo | null>(null);
 
   useEffect(() => {
     fetch('/api/gallery')
@@ -28,7 +28,7 @@ export default function GalleryPage() {
       });
   }, []);
 
-  if(loading) {
+  if (loading) {
     return <div className="min-h-screen flex items-center justify-center">Loading Gallery...</div>;
   }
 
@@ -42,34 +42,60 @@ export default function GalleryPage() {
         {photos.map((photo) => (
           <div
             key={photo.id}
-            className="cursor-pointer perspective hover:shadow-lg hover:scale-105 transition-all duration-300"
+            onClick={() => setExpanded(photo)}
+            className="cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
-              {/* Front (image) */}
-              <div
-                className="relative h-64 w-full group rounded-xl overflow-hidden shadow cursor-pointer"
-                onTouchStart={() => setActiveId(activeId === photo.id ? null : photo.id)}
-              >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className={`object-cover transition-all duration-500 group-hover:brightness-50 ${
-                    activeId === photo.id ? "brightness-50" : ""
-                  }`}
-                  loading="lazy"
-                />
-                
-                {/* On Hover (caption) */}
-                <div className={`absolute inset-0 flex items-center justify-center p-6 text-center transition-opacity duration-500 ${
-                  activeId === photo.id ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-                }`}>
-                  <p className="text-white font-semibold">{photo.caption}</p>
-                </div>
+            <div className="relative h-64 w-full group rounded-xl overflow-hidden shadow">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover transition-all duration-500 group-hover:brightness-50 group-hover:blur-sm"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 flex items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <p className="text-white font-semibold">{photo.caption}</p>
               </div>
+            </div>
           </div>
         ))}
       </div>
+
+      {/* Expanded modal */}
+      {expanded && (
+        <div
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6"
+          onClick={() => setExpanded(null)}
+        >
+          <div
+            className="relative bg-background rounded-xl shadow-2xl p-6 max-w-4xl w-full flex flex-col gap-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* X button */}
+            <button
+              className="absolute top-3 right-3 text-foreground hover:opacity-70 transition-opacity text-xl font-bold"
+              onClick={() => setExpanded(null)}
+            >
+              ✕
+            </button>
+
+            {/* Image */}
+            <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden mt-4">
+              <Image
+                src={expanded.src}
+                alt={expanded.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-contain"
+              />
+            </div>
+
+            {/* Caption */}
+            <p className="text-center font-semibold">{expanded.caption}</p>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
