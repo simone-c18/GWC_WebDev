@@ -12,8 +12,8 @@ interface Photo {
 
 export default function GalleryPage() {
   const [photos, setPhotos] = useState<Photo[]>([]);
-  const [flipped, setFlipped] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
+  const [activeId, setActiveId] = useState<number | null>(null);
 
   useEffect(() => {
     fetch('/api/gallery')
@@ -34,7 +34,7 @@ export default function GalleryPage() {
 
   return (
     <main className="min-h-screen bg-background text-foreground px-6 py-20">
-      <h1 className="text-4xl font-semibold tracking-tight text-center mb-12">
+      <h1 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-semibold tracking-tight text-center mt-8 mb-8">
         photos from our meetings, socials, and workshops!
       </h1>
 
@@ -42,32 +42,31 @@ export default function GalleryPage() {
         {photos.map((photo) => (
           <div
             key={photo.id}
-            onClick={() =>
-              setFlipped(flipped === photo.id ? null : photo.id)
-              
-            }
-              className="cursor-pointer perspective hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="cursor-pointer perspective hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
-            <div
-              className={`relative h-64 w-full transition-transform duration-500 transform-style preserve-3d ${
-                flipped === photo.id ? "rotate-y-180" : ""
-              }`}
-            >
               {/* Front (image) */}
-              <div className="absolute inset-0 backface-hidden rounded-xl overflow-hidden shadow">
+              <div
+                className="relative h-64 w-full group rounded-xl overflow-hidden shadow cursor-pointer"
+                onTouchStart={() => setActiveId(activeId === photo.id ? null : photo.id)}
+              >
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className={`object-cover transition-all duration-500 group-hover:brightness-50 ${
+                    activeId === photo.id ? "brightness-50" : ""
+                  }`}
+                  loading="lazy"
                 />
+                
+                {/* On Hover (caption) */}
+                <div className={`absolute inset-0 flex items-center justify-center p-6 text-center transition-opacity duration-500 ${
+                  activeId === photo.id ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                }`}>
+                  <p className="text-white font-semibold">{photo.caption}</p>
+                </div>
               </div>
-
-              {/* Back (caption) */}
-              <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl bg-foreground text-gwc-darkblue flex items-center justify-center p-6 text-center shadow">
-                <p>{photo.caption}</p>
-              </div>
-            </div>
           </div>
         ))}
       </div>
