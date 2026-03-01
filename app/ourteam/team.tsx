@@ -14,13 +14,13 @@ const teamMembers: TeamMember[] = [
     id: 1,
     name: "Shianne Wood",
     role: "President",
-    image: "/images/placeholder.jpg",
+    image: "/images/shai_team.png",
   },
   {
     id: 2,
     name: "Vianna Hyunh",
     role: "Vice President",
-    image: "/images/placeholder.jpg",
+    image: "/images/vianna_team.png",
   },
   {
     id: 3,
@@ -44,55 +44,55 @@ const teamMembers: TeamMember[] = [
     id: 6,
     name: "Shealyn Rodriguez",
     role: "Social Media",
-    image: "/images/placeholder.jpg",
+    image: "/images/shea_team.webp",
   },
   {
     id: 7,
     name: "Sophia Vignali",
     role: "Event Coordinator",
-    image: "/images/placeholder.jpg",
+    image: "/images/sophia_team.webp",
   },
   {
     id: 8,
     name: "Michelle John",
     role: "Event Coordinator",
-    image: "/images/placeholder.jpg",
+    image: "/images/michelle_team.webp",
   },
   {
     id: 9,
     name: "Britni Barcelo",
     role: "Workshop Director",
-    image: "/images/placeholder.jpg",
+    image: "/images/britni_team.webp",
   },
   {
     id: 10,
     name: "Simone Chrastek",
     role: "Workshop Director",
-    image: "/images/placeholder.jpg",
+    image: "/images/simone_team.webp",
   },
   {
     id: 11,
     name: "Adriana Lee-Fook",
     role: "Workshop Director",
-    image: "/images/placeholder.jpg",
+    image: "/images/adriana_team.png",
   },
   {
     id: 12,
     name: "Reese Odvina",
     role: "Graphic Designer",
-    image: "/images/placeholder.jpg",
+    image: "/images/reese_team.webp",
   },
   {
     id: 13,
     name: "Tanisha Sahay",
     role: "Graphic Designer",
-    image: "/images/placeholder.jpg",
+    image: "/images/tanishqa_team.webp",
   },
   {
     id: 14,
     name: "Isabella Austin",
     role: "Graphic Designer",
-    image: "/images/placeholder.jpg",
+    image: "/images/izzy_team.webp",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function Team() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-16 px-4 sm:px-6 lg:px-8 pt-32">
+    <div className="min-h-screen bg-[linear-gradient(to_bottom,#ffffff_0%,#eef4fc_12.5%,#BCD1ED_25%,#eef4fc_37.5%,#ffffff_50%,#eef4fc_62.5%,#BCD1ED_75%,#eef4fc_87.5%,#ffffff_100%)] py-16 px-4 sm:px-6 lg:px-8 pt-32">
       <div className="max-w-6xl mx-auto">
 
         {/* Title */}
