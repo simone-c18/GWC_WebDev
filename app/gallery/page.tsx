@@ -95,7 +95,7 @@ export default function GalleryPage() {
               </div>
 
               {/* Back (caption) */}
-              <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl bg-foreground text-background flex items-center justify-center p-6 text-center shadow">
+              <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl bg-foreground text-gwc-darkblue flex items-center justify-center p-6 text-center shadow">
                 <p>{photo.caption}</p>
               </div>
             </div>
