@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-     <nav className="fixed top-4 inset-x-0 z-50 mx-auto w-[95%] max-w-7xl rounded-lg border border-black/10 dark:border-white/10 bg-gwc-lightblue/80 backdrop-blur-md text-foreground shadow-lg">
+     <nav className="fixed top-10 inset-x-0 z-50 mx-auto w-[95%] max-w-7xl rounded-lg border border-black/10 dark:border-white/10 bg-gwc-lightblue/80 backdrop-blur-md text-foreground shadow-lg">
       <div className="flex items-center justify-between px-8 py-3">
         
         {/* Left: Logo */}
@@ -26,9 +26,6 @@ export default function Navbar() {
           </Link>
           <Link href="/ourteam" className="hover:opacity-70 transition">
             our team
-          </Link>
-          <Link href="/join" className="hover:opacity-70 transition">
-            join
           </Link>
         </div>
 
