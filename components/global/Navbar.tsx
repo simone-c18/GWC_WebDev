@@ -24,7 +24,7 @@ export default function Navbar() {
           <Link href="/links" className="hover:opacity-70 transition">
             links
           </Link>
-          <Link href="/ourteam" className="hover:opacity-70 transition">
+          <Link href="/team" className="hover:opacity-70 transition">
             our team
           </Link>
         </div>
