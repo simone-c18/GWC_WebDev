@@ -12,7 +12,7 @@ export default function ContactPage() {
 
         {/* header */}
         <h1 className= "text-4xl font-semibold text-[#081F5C] text-center tracking-tight mb-4">
-          Let's Get in Touch!
+          let's get in touch!
         </h1>
 
       {/* reach out to us text */}
