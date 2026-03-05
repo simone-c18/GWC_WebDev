@@ -10,7 +10,7 @@ export default function ContactPage() {
           reach out to us through email or social media for inquiries
         </p>
 
-        <form className="space-y-6">
+        <form className="space-y-6 bg-blue">
           <div>
             <label className="block mb-2 text-sm font-medium">
               name/company
