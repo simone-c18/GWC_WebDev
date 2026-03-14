@@ -64,7 +64,7 @@ export default function GalleryPage() {
   const [flipped, setFlipped] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen bg-background text-foreground px-6 py-20">
+    <main className="min-h-screen text-foreground px-6 py-20">
       <h1 className="text-4xl font-semibold tracking-tight text-center mb-12">
         photos from our meetings, socials, and workshops!
       </h1>
