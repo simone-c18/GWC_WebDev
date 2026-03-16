@@ -1,5 +1,5 @@
 import Link from "next/link";
-// import logo from "app/logo.png";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -8,13 +8,17 @@ export default function Navbar() {
         
         {/* Left: Logo */}
         <div>
-          <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">
-            Girls Who Code UCF
-          </h3>
+          <Image
+            src="/logo.png"
+            alt="Girls Who Code UCF"
+            width={80}
+            height={40}
+            className="object-contain"
+          />
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white">
           <Link href="/calendar" className="hover:opacity-70 transition">
             calendar
           </Link>

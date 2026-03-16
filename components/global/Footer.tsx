@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,9 +8,13 @@ export default function Footer() {
 
         {/* Left: Logo */}
         <div>
-          <h3 className="text-xl font-semibold text-white">
-            Girls Who Code UCF
-          </h3>
+          <Image
+            src="/logo.png"
+            alt="Girls Who Code UCF"
+            width={120}
+            height={40}
+            className="object-contain"
+          />
         </div>
 
         {/* Left Middle: Navigation */}
