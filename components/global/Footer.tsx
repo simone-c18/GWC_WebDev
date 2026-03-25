@@ -44,9 +44,9 @@ export default function Footer() {
           href="/contact"
           className="hidden md:inline-flex items-center rounded-full bg-gwc-lightblue px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition"
         >
-          contact
+          contacts
         </Link>
-        <p>girlswhocodeucf@gmail.com<span className="font-medium"></span></p>
+        <p>girlswhocodeucf@gmail.com<span className="font-medium pt-12"></span></p>
         </div>
 
       </div>

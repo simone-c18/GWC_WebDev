@@ -7,12 +7,12 @@ const alexandria = Alexandria({
 
 export default function ContactPage() {
   return (
-    <main className={`${alexandria.className} min-h-screen bg-[#F2F0F0] flex items-center justify-center px-6 py-20`}>
+    <main className={`${alexandria.className} min-h-screen flex items-center justify-center px-6 py-20`}>
       <div className="w-full max-w-2xl">
 
         {/* header */}
-        <h1 className= "text-4xl font-semibold text-[#081F5C] text-center tracking-tight mb-4">
-          Let's Get in Touch!
+        <h1 className= "text-4xl font-semibold text-[#081F5C] text-center tracking-tight mb-4 pt-10">
+          let's get in touch!
         </h1>
 
       {/* reach out to us text */}
