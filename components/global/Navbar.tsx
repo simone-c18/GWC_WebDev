@@ -1,17 +1,24 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
-     <nav className="w-full border-b border-black/10 dark:border-white/10 bg-background text-foreground">
-      <div  className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+     <nav className="fixed top-4 inset-x-0 z-50 mx-auto w-[95%] max-w-7xl rounded-lg border border-black/10 dark:border-white/10 bg-gwc-lightblue/80 backdrop-blur-md text-foreground shadow-lg">
+      <div className="flex items-center justify-between px-8 py-3">
         
-        {/* Logo */}
-        <Link href="/" className="text-xl font-semibold tracking-tight">
-          GWC @ UCF
-        </Link>
+        {/* Left: Logo */}
+        <div>
+          <Image
+            src="/logo.png"
+            alt="Girls Who Code UCF"
+            width={80}
+            height={40}
+            className="object-contain"
+          />
+        </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white">
           <Link href="/calendar" className="hover:opacity-70 transition">
             calendar
           </Link>
@@ -29,7 +36,7 @@ export default function Navbar() {
         {/* Call to Action */}
         <Link
           href="/contact"
-          className="hidden md:inline-flex items-center rounded-full bg-foreground px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition"
+          className="hidden md:inline-flex items-center rounded-full bg-gwc-darkblue px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition"
         >
           contact
         </Link>
