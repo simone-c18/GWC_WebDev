@@ -42,9 +42,9 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 rounded-lg border border-black/10 dark:border-white/20 text-white"
+          className="md:hidden p-2 text-white"
           onClick={() => setMenuOpen(!menuOpen)}
-        >
+        > 
           {menuOpen ? "✕" : "☰"}
         </button>
       </div>
