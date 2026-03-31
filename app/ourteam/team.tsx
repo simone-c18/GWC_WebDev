@@ -135,7 +135,7 @@ export default function Team() {
 
         {/* Title */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gwc-darkblue mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gwc-darkblue mb-4 mt-10">
             '25–26 board
           </h1>
         </div>
