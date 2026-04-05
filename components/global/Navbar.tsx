@@ -29,7 +29,7 @@ export default function Navbar() {
           <Link href="/calendar" className="hover:opacity-70 transition">calendar</Link>
           <Link href="/gallery" className="hover:opacity-70 transition">gallery</Link>
           <Link href="/links" className="hover:opacity-70 transition">links</Link>
-          <Link href="/ourteam" className="hover:opacity-70 transition">our team</Link>
+          <Link href="/team" className="hover:opacity-70 transition">our team</Link>
         </div>
 
         {/* Desktop CTA */}
