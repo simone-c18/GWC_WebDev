@@ -24,7 +24,7 @@ export default function Footer() {
             <li><a href="/join" className="hover:underline">become a member</a></li>
             <li><a href="/gallery" className="hover:underline">gallery</a></li>
             <li><a href="/links" className="hover:underline">links</a></li>
-            <li><a href="/ourTeam" className="hover:underline">our team</a></li>
+            <li><a href="/team" className="hover:underline">our team</a></li>
           </ul>
         </div>
 
