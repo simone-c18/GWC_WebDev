@@ -30,6 +30,7 @@ export default function Navbar() {
           <Link href="/gallery" className="hover:opacity-70 transition">gallery</Link>
           <Link href="/links" className="hover:opacity-70 transition">links</Link>
           <Link href="/ourteam" className="hover:opacity-70 transition">our team</Link>
+          <Link href="/join" className="hover:opacity-70 transition">join</Link>
         </div>
 
         {/* Desktop CTA */}
@@ -56,6 +57,7 @@ export default function Navbar() {
           <Link href="/gallery" className="hover:opacity-70 transition" onClick={() => setMenuOpen(false)}>gallery</Link>
           <Link href="/links" className="hover:opacity-70 transition" onClick={() => setMenuOpen(false)}>links</Link>
           <Link href="/ourteam" className="hover:opacity-70 transition" onClick={() => setMenuOpen(false)}>our team</Link>
+          <Link href="/join" className="hover:opacity-70 transition" onClick={() => setMenuOpen(false)}>join</Link>
           <Link
             href="/contact"
             className="inline-flex w-fit items-center rounded-full bg-gwc-darkblue px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition"
