@@ -26,19 +26,19 @@ const teamMembers: TeamMember[] = [
     id: 3,
     name: "Adema Berdenova",
     role: "Secretary",
-    image: "/images/placeholder.jpg",
+    image: "/images/adema_team.png",
   },
   {
     id: 4,
     name: "Ayla Tristao",
     role: "Treasurer",
-    image: "/images/placeholder.jpg",
+    image: "/images/ayla_team.png",
   },
   {
     id: 5,
     name: "Madeleine Haddad",
     role: "Sponsorship Chair",
-    image: "/images/placeholder.jpg",
+    image: "/images/madeleine_team.png",
   },
   {
     id: 6,
@@ -135,7 +135,7 @@ export default function Team() {
 
         {/* Title */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gwc-darkblue mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gwc-darkblue mb-4 mt-10">
             '25–26 board
           </h1>
         </div>

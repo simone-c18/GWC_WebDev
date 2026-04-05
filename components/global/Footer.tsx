@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,9 +8,13 @@ export default function Footer() {
 
         {/* Left: Logo */}
         <div>
-          <h3 className="text-xl font-semibold text-white">
-            Girls Who Code UCF
-          </h3>
+          <Image
+            src="/logo.png"
+            alt="Girls Who Code UCF"
+            width={120}
+            height={40}
+            className="object-contain"
+          />
         </div>
 
         {/* Left Middle: Navigation */}
@@ -25,11 +30,43 @@ export default function Footer() {
 
         {/* Right Middle: Social */}
         <div>
-          <ul className="space-y-2 text-sm">
-            {/* insert links for each image */}
-            <li>Instagram Logo<span className="font-medium"></span></li>
-            <li>Discord Logo <span className="font-medium"></span></li>
-            <li>LinkedIn Logo <span className="font-medium"></span></li>
+          <ul className="flex flex-row items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+            <li className="relative h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12">
+              <a href="https://www.linkedin.com/company/girls-who-code-ucf" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/linkedin-logo.PNG"
+                  alt="LinkedIn Logo"
+                  fill
+                  sizes="(max-width: 640px) 24px, (max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li className="relative h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12">
+              <a href="https://www.instagram.com/girlswhocodeucf" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/ig-logo.PNG"
+                  alt="Instagram Logo"
+                  fill
+                  sizes="(max-width: 640px) 24px, (max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li className="relative h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 rounded-lg overflow-hidden">
+              <a href="https://discord.gg/yaWQ8wzTax" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/discord-logo.jpg"
+                  alt="Discord Logo"
+                  fill
+                  sizes="(max-width: 640px) 24px, (max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </li>
           </ul>
         </div>
         
@@ -39,9 +76,9 @@ export default function Footer() {
           href="/contact"
           className="hidden md:inline-flex items-center rounded-full bg-gwc-lightblue px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition"
         >
-          contact
+          contacts
         </Link>
-        <p>girlswhocodeucf@gmail.com<span className="font-medium"></span></p>
+        <p>girlswhocodeucf@gmail.com<span className="font-medium pt-12"></span></p>
         </div>
 
       </div>
