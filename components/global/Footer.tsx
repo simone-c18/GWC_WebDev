@@ -21,20 +21,52 @@ export default function Footer() {
         <div>
           <ul className="space-y-2 text-sm">
             <li><a href="/calendar" className="hover:underline">calendar</a></li>
-            <li><a href="/becomeMember" className="hover:underline">become a member</a></li>
+            <li><a href="/join" className="hover:underline">become a member</a></li>
             <li><a href="/gallery" className="hover:underline">gallery</a></li>
             <li><a href="/links" className="hover:underline">links</a></li>
-            <li><a href="/ourTeam" className="hover:underline">our team</a></li>
+            <li><a href="/team" className="hover:underline">our team</a></li>
           </ul>
         </div>
 
         {/* Right Middle: Social */}
         <div>
-          <ul className="space-y-2 text-sm">
-            {/* insert links for each image */}
-            <li>Instagram Logo<span className="font-medium"></span></li>
-            <li>Discord Logo <span className="font-medium"></span></li>
-            <li>LinkedIn Logo <span className="font-medium"></span></li>
+          <ul className="flex flex-row items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+            <li className="relative h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12">
+              <a href="https://www.linkedin.com/company/girls-who-code-ucf" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/linkedin-logo.PNG"
+                  alt="LinkedIn Logo"
+                  fill
+                  sizes="(max-width: 640px) 24px, (max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li className="relative h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12">
+              <a href="https://www.instagram.com/girlswhocodeucf" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/ig-logo.PNG"
+                  alt="Instagram Logo"
+                  fill
+                  sizes="(max-width: 640px) 24px, (max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li className="relative h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 rounded-lg overflow-hidden">
+              <a href="https://discord.gg/yaWQ8wzTax" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/discord-logo.jpg"
+                  alt="Discord Logo"
+                  fill
+                  sizes="(max-width: 640px) 24px, (max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </li>
           </ul>
         </div>
         
@@ -46,7 +78,7 @@ export default function Footer() {
         >
           contact
         </Link>
-        <p>girlswhocodeucf@gmail.com<span className="font-medium"></span></p>
+        <p>girlswhocodeucf@gmail.com<span className="font-medium pt-12 mt-8"></span></p>
         </div>
 
       </div>
