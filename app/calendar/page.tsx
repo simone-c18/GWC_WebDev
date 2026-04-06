@@ -10,7 +10,7 @@ export default function CalendarPage() {
       <div className="max-w-6xl mx-auto">
 
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gwc-darkblue mb-4 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+          <h1 className="text-4xl md:text-5xl font-bold text-gwc-darkblue mb-4 mt-8 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
             monthly calendar
           </h1>
         </div>

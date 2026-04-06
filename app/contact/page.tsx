@@ -7,7 +7,7 @@ const alexandria = Alexandria({
 
 export default function ContactPage() {
   return (
-    <main className={`${alexandria.className} min-h-screen flex items-center justify-center px-6 py-20`}>
+    <main className={`${alexandria.className} min-h-screen flex items-center justify-center px-6 py-20 mt-8`}>
       <div className="w-full max-w-2xl">
 
         {/* header */}

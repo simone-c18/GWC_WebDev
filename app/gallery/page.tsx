@@ -29,12 +29,12 @@ export default function GalleryPage() {
   }, []);
 
   if (loading) {
-    return <div className="min-h-screen flex items-center justify-center">Loading Gallery...</div>;
+    return <div className="min-h-screen flex items-center justify-center">loading gallery...</div>;
   }
 
   return (
-    <main className="min-h-screen bg-background text-foreground px-6 py-20">
-      <h1 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-semibold tracking-tight text-center mt-8 mb-8 text-gwc-darkblue pt-10">
+    <main className="min-h-screen text-foreground px-6 py-20">
+      <h1 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-semibold tracking-tight text-center mt-10 mb-8 text-gwc-darkblue pt-10">
         photos from our meetings, socials, and workshops!
       </h1>
 
