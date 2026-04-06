@@ -23,10 +23,10 @@ export default function Footer() {
         <div>
           <ul className="space-y-2 text-sm">
             <li><a href="/calendar" className="hover:underline">calendar</a></li>
-            <li><a href="/becomeMember" className="hover:underline">become a member</a></li>
+            <li><a href="/join" className="hover:underline">become a member</a></li>
             <li><a href="/gallery" className="hover:underline">gallery</a></li>
             <li><a href="/links" className="hover:underline">links</a></li>
-            <li><a href="/ourTeam" className="hover:underline">our team</a></li>
+            <li><a href="/team" className="hover:underline">our team</a></li>
           </ul>
         </div>
 
@@ -80,7 +80,7 @@ export default function Footer() {
         >
           contact
         </Link>
-        <p>girlswhocodeucf@gmail.com<span className="font-medium"></span></p>
+        <p>girlswhocodeucf@gmail.com<span className="font-medium pt-12 mt-8"></span></p>
         </div>
 
       </div>
