@@ -7,6 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 flex flex-col gap-8 sm:flex-row sm:justify-between sm:items-start">
 
         {/* Left: Logo */}
+        <a href="/" className="hover:underline">
         <div>
           <Image
             src="/logo.png"
@@ -16,6 +17,7 @@ export default function Footer() {
             className="object-contain"
           />
         </div>
+        </a>
 
         {/* Left Middle: Navigation */}
         <div>
