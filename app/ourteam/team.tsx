@@ -85,7 +85,7 @@ const teamMembers: TeamMember[] = [
     id: 11,
     name: "Adriana Lee-Fook",
     role: "Workshop Director",
-    image: "/images/adriana_team.png",
+    image: "/images/adriana_team.jpg",
     linkedin: "https://www.linkedin.com/in/adriana-lee-fook/",
   },
   {
