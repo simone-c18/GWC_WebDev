@@ -19,7 +19,7 @@ const Links = () => {
   return (
     <main className="pt-20 pb-20">
       <section className="text-center py-10">
-        <h1 className="font-arial font-bold text-3xl text-blue-950">links & resources</h1>
+        <h1 className="font-arial font-bold text-3xl text-blue-950 mt-8">links & resources</h1>
         <p className="font-bold text-blue-950 text-2xl">support us and join our community!</p>
       </section>
 
