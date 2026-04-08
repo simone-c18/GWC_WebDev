@@ -31,8 +31,10 @@ function CopyEmailButton() {
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gwc-darkblue text-white dark:text-zinc-300 py-10 mt-20">
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 grid grid-cols-2 gap-x-4 gap-y-8 items-start sm:flex sm:flex-wrap sm:justify-center md:justify-between">
+    <div>
+    <footer className="w-full bg-gwc-darkblue text-white dark:text-zinc-300 py-10">
+      
+      <div className="max-w-6xl mx-auto px-6 flex flex-col gap-8 sm:flex-row sm:justify-between sm:items-start">
 
         {/* Left: Logo */}
         <a href="/" className="hover:underline">
@@ -118,5 +120,6 @@ export default function Footer() {
         © {new Date().getFullYear()} Girls Who Code UCF. All rights reserved.
       </div>
     </footer>
+    </div>
   );
 }

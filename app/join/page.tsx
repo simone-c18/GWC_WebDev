@@ -4,9 +4,16 @@ import './join.css';
 
 export default function joinPage() {
     
+    /*const {setCircles} = useBackground(); 
+    // add another set of brackets after x: and you can set sm: (size) md: (diff-size) etc.
+    useEffect(() => { setCircles([
+        {x: 10, y: 22},
+        {x: 15, y: 98}
+    ])
+    }, [])*/
 
     return (
-        <div>
+        <div className="">
             <div className="font-alexandria mt-28 flex flex-col break-words justify-center items-center">
                 {/* Steps Header */}
                 <div className="flex flex-col items-center text-center">
