@@ -2,7 +2,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gwc-darkblue text-white dark:text-zinc-300 py-10 mt-20">
+    <div>
+    <footer className="w-full bg-gwc-darkblue text-white dark:text-zinc-300 py-10">
+      
       <div className="max-w-6xl mx-auto px-6 flex flex-col gap-8 sm:flex-row sm:justify-between sm:items-start">
 
         {/* Left: Logo */}
@@ -51,5 +53,6 @@ export default function Footer() {
         © {new Date().getFullYear()} Girls Who Code UCF. All rights reserved.
       </div>
     </footer>
+    </div>
   );
 }

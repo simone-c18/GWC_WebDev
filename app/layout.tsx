@@ -34,13 +34,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <BackgroundProvider>
-          <GlobalBackground />
+        <div className="bg-[url(/images/mobile-background.png)] lg:bg-[url(/images/background.webp)]  bg-cover bg-center lg:bg-center h-full pb-20 lg:bg-opacity-0">
           <Member />
           <Navbar />
           {children}
+          </div>
           <Footer />
-        </BackgroundProvider>
+          
       </body>
     </html>
   );
