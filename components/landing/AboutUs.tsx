@@ -33,9 +33,9 @@ export default function AboutUs() {
             </p>
             <Link
             href="/join"
-            className="bg-gwc-darkblue text-white self-center px-7 py-3 rounded-lg text-sm tracking-wide"
+            className="self-center bg-gwc-darkblue text-white px-7 py-3 rounded-lg text-sm tracking-wide hover:scale-105 transition-transform duration-200"
             >
-            join the family!
+                join the family!
             </Link>
         </div>
 

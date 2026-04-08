@@ -28,7 +28,7 @@ export default function Hero() {
         <h1 className="text-3xl sm:text-4xl md:text-4xl xl:text-5xl text-gwc-darkblue font-semibold leading-snug mb-6">
           we're on a<br/> mission to close<br/> the <b> gender gap</b> in<br/>tech
         </h1>
-        <a href="https://girlswhocode.com/" target="_blank" rel="noopener noreferrer" className="bg-gwc-darkblue text-white px-7 py-3 rounded-lg text-sm tracking-wide">
+        <a href="https://girlswhocode.com/" target="_blank" rel="noopener noreferrer" className="inline-block bg-gwc-darkblue text-white px-7 py-3 rounded-lg text-sm tracking-wide hover:scale-105 transition-transform duration-200">
           learn more
         </a>
       </div>
