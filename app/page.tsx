@@ -17,9 +17,10 @@ export default function Home() {
       </div>
 
       {/* merch */}
-      <div className="px-6 sm:px-10 md:px-16 lg:px-20">
+      <div>
         
       </div>
+      
       
     </main>
     
