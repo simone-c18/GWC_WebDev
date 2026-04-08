@@ -1,3 +1,4 @@
+import AboutUs from "@/components/landing/AboutUs";
 import Hero from "@/components/landing/Hero";
 
 export default function Home() {
@@ -8,9 +9,7 @@ export default function Home() {
       <Hero />
 
       {/* about us */}
-      <div className="px-6 sm:px-10 md:px-16 lg:px-20">
-
-      </div>
+      <AboutUs />
 
       {/* industry */}
       <div className="px-6 sm:px-10 md:px-16 lg:px-20">

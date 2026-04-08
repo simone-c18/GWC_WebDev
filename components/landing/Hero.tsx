@@ -9,13 +9,13 @@ const polaroids = [
 
 export default function Hero() {
   return (
-    <section className="relative w-[95%] max-w-7xl mx-auto min-h-[600px] rounded-2xl flex items-center justify-center py-16">
+    <section className="relative w-[95%] max-w-7xl mx-auto min-h-[650px] rounded-2xl flex items-center justify-center py-16 mt-16">
 
       {/* Polaroids — hidden on mobile, visible md+ */}
       {polaroids.map(({ src, alt, className }) => (
         <div
           key={alt}
-          className={`hidden md:block absolute bg-white p-3 pb-12 shadow-lg w-[220px] z-10 ${className}`}
+          className={`hidden md:block absolute bg-[#e8e8e6] pt-2 px-3 pb-14 shadow-[2px_4px_12px_rgba(0,0,0,0.15)] w-[220px] z-10 transition-transform duration-200 hover:scale-105 hover:z-20 ${className}`}
         >
           <div className="relative w-full h-[180px]">
             <Image src={src} alt={alt} fill className="object-cover" />
@@ -28,9 +28,9 @@ export default function Hero() {
         <h1 className="text-3xl sm:text-4xl md:text-4xl xl:text-5xl text-gwc-darkblue font-semibold leading-snug mb-6">
           we're on a<br/> mission to close<br/> the <b> gender gap</b> in<br/>tech
         </h1>
-        <button className="bg-gwc-darkblue text-white px-7 py-3 rounded-lg text-sm tracking-wide">
+        <a href="https://girlswhocode.com/" target="_blank" rel="noopener noreferrer" className="bg-gwc-darkblue text-white px-7 py-3 rounded-lg text-sm tracking-wide">
           learn more
-        </button>
+        </a>
       </div>
     </section>
   );
