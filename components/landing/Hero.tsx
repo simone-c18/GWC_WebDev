@@ -9,7 +9,7 @@ const polaroids = [
 
 export default function Hero() {
   return (
-    <section className="relative w-[95%] max-w-7xl mx-auto min-h-[650px] rounded-2xl flex items-center justify-center py-16 mt-16">
+    <section className="relative w-[95%] max-w-7xl mx-auto min-h-[400px] sm:min-h-[500px] md:min-h-[650px] rounded-2xl flex items-center justify-center py-10 mt-10">
 
       {/* Polaroids — hidden on mobile, visible md+ */}
       {polaroids.map(({ src, alt, className }) => (
@@ -23,12 +23,20 @@ export default function Hero() {
         </div>
       ))}
 
-      {/* Center text — narrow padding on mobile, wide on desktop to avoid polaroid overlap */}
-      <div className="relative z-20 text-center px-6 md:px-64 lg:px-72">
-        <h1 className="text-3xl sm:text-4xl md:text-4xl xl:text-5xl text-gwc-darkblue font-semibold leading-snug mb-6">
-          we're on a<br/> mission to close<br/> the <b> gender gap</b> in<br/>tech
+      {/* Center text */}
+      <div className="relative z-20 text-center px-6 md:px-56 lg:px-72">
+        <h1 className="text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-gwc-darkblue font-semibold leading-snug mb-6">
+          we're on a<br/>
+          mission to close<br/>
+          the <b>gender gap</b> in<br/>
+          tech
         </h1>
-        <a href="https://girlswhocode.com/" target="_blank" rel="noopener noreferrer" className="inline-block bg-gwc-darkblue text-white px-7 py-3 rounded-lg text-sm tracking-wide hover:scale-105 transition-transform duration-200">
+        <a
+          href="https://girlswhocode.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-gwc-darkblue text-white px-7 py-3 rounded-lg text-sm tracking-wide hover:scale-105 transition-transform duration-200"
+        >
           learn more
         </a>
       </div>
