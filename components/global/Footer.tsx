@@ -14,8 +14,8 @@ function CopyEmailButton() {
   };
 
   return (
-    <button onClick={handleCopy} className="md:inline-flex items-center rounded-full bg-gwc-lightblue px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition">
-      {copied ? "copied!" : "email us!"}
+    <button onClick={handleCopy} className="w-fit text-sm text-white hover:underline">
+      {copied ? "copied!" : "girlswhocodeucf@gmail.com"}
     </button>
   );
 }
@@ -23,7 +23,7 @@ function CopyEmailButton() {
 export default function Footer() {
   return (
     <footer className="w-full bg-gwc-darkblue text-white dark:text-zinc-300 py-10 mt-20">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 gap-8 items-start sm:flex sm:flex-wrap sm:justify-center md:justify-between">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 grid grid-cols-2 gap-x-4 gap-y-8 items-start sm:flex sm:flex-wrap sm:justify-center md:justify-between">
 
         {/* Left: Logo */}
         <a href="/" className="hover:underline">
@@ -41,11 +41,11 @@ export default function Footer() {
         {/* Left Middle: Navigation */}
         <div>
           <ul className="space-y-2 text-sm">
-            <li><a href="/calendar" className="hover:underline">calendar</a></li>
-            <li><a href="/join" className="hover:underline">become a member</a></li>
-            <li><a href="/gallery" className="hover:underline">gallery</a></li>
-            <li><a href="/links" className="hover:underline">links</a></li>
-            <li><a href="/team" className="hover:underline">our team</a></li>
+            <li><a href="/calendar" className="text-white hover:underline">calendar</a></li>
+            <li><a href="/join" className="text-white hover:underline">become a member</a></li>
+            <li><a href="/gallery" className="text-white hover:underline">gallery</a></li>
+            <li><a href="/links" className="text-white hover:underline">links</a></li>
+            <li><a href="/team" className="text-white hover:underline">our team</a></li>
           </ul>
         </div>
 
@@ -92,10 +92,10 @@ export default function Footer() {
         </div>
         
         {/* Right: Contact */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 items-start justify-self-start">
           <Link
             href="/contact"
-            className="md:inline-flex items-center rounded-full bg-gwc-lightblue px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition text-center"
+            className="inline-flex w-fit items-center rounded-full bg-gwc-lightblue px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition"
           >
             contact
           </Link>
