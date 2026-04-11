@@ -5,7 +5,7 @@ import './join.css';
 export default function joinPage() {
     return (
         <div className="">
-            <div className="font-alexandria mt-28 flex flex-col break-words justify-center items-center">
+            <div className="font-alexandria pt-20 md:pt-28 flex flex-col break-words justify-center items-center">
                 {/* Steps Header */}
                 <div className="flex flex-col items-center text-center">
                     <div className="text-gwc-darkblue font-bold text-xl sm:text-5xl pt-8 mt-10">ready to become a member?</div>
