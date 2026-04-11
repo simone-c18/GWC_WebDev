@@ -3,18 +3,9 @@
 import './join.css';
 
 export default function joinPage() {
-    
-    /*const {setCircles} = useBackground(); 
-    // add another set of brackets after x: and you can set sm: (size) md: (diff-size) etc.
-    useEffect(() => { setCircles([
-        {x: 10, y: 22},
-        {x: 15, y: 98}
-    ])
-    }, [])*/
-
     return (
         <div className="">
-            <div className="font-alexandria mt-28 flex flex-col break-words justify-center items-center">
+            <div className="font-alexandria pt-20 md:pt-28 flex flex-col break-words justify-center items-center">
                 {/* Steps Header */}
                 <div className="flex flex-col items-center text-center">
                     <div className="text-gwc-darkblue font-bold text-xl sm:text-5xl pt-8 mt-10">ready to become a member?</div>
@@ -25,7 +16,7 @@ export default function joinPage() {
                 </div>
                 {/* CollegeLoop Steps */}
                 <div className="flex flex-col mx-2 md:ml-4">
-                    <div className="md:flex text-gwc-darkblue font-bold text-left text-xl sm:text-5xl mt-5 sm:mt-10">
+                    <div className="md:flex text-gwc-darkblue font-bold text-left text-3xl sm:text-5xl mt-5 sm:mt-10">
                         <div className="whitespace-pre-wrap">→ join our </div>
                         <div>college loop</div>
                     </div>

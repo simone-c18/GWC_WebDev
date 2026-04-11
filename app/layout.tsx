@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="bg-[url(/images/mobile-background.png)] lg:bg-[url(/images/background.webp)]  bg-cover bg-center lg:bg-center h-full pb-20 lg:bg-opacity-0">
-          <Member />
+          {/*<Member />*/}
           <Navbar />
           {children}
           </div>
