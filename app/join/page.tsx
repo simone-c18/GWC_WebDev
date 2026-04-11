@@ -1,9 +1,6 @@
 "use client";
 
 import './join.css';
-import { useEffect } from "react"
-import { createBackground } from "../lib/createBackground" 
-import {useBackground} from "../lib/backgroundContext"
 
 export default function joinPage() {
     
@@ -20,7 +17,7 @@ export default function joinPage() {
             <div className="font-alexandria mt-28 flex flex-col break-words justify-center items-center">
                 {/* Steps Header */}
                 <div className="flex flex-col items-center text-center">
-                    <div className="text-gwc-darkblue font-bold text-3xl sm:text-5xl">ready to become a member?</div>
+                    <div className="text-gwc-darkblue font-bold text-xl sm:text-5xl pt-8 mt-10">ready to become a member?</div>
                     <div className="font-normal sm:text-base mt-4 text-xs">
                         <div>follow the steps below to become an official member of </div>
                         <div>ucf’s girls who code! no dues are needed :)</div>
@@ -28,12 +25,12 @@ export default function joinPage() {
                 </div>
                 {/* CollegeLoop Steps */}
                 <div className="flex flex-col mx-2 md:ml-4">
-                    <div className="md:flex text-gwc-darkblue font-bold text-left text-3xl sm:text-5xl mt-5 sm:mt-10">
-                        <div className="whitespace-pre-wrap">→ join us on </div>
+                    <div className="md:flex text-gwc-darkblue font-bold text-left text-xl sm:text-5xl mt-5 sm:mt-10">
+                        <div className="whitespace-pre-wrap">→ join our </div>
                         <div>college loop</div>
                     </div>
                     
-                    <div className="font-normal sm:text-2xl  mt-1 sm:mt-4">
+                    <div className="font-normal sm:text-xl  mt-1 sm:mt-4">
                         <div className="flex whitespace-pre-wrap mt-4 align-center flex-wrap"><div>1. Go to the   </div><a href="https://hq.girlswhocode.com/" target="_blank"><button type="button" className="bg-buttonBlue text-gwc-darkblue font-bold rounded-md border-3 border-gwc-darkblue py-1 px-4 justify-center align-center text-md sm:text-xl md:text-2xl lg:txt-3xl -mt-2 md:-mt-2">Girls Who Code HQ</button></a><div>   website</div></div>
                         <div className="flex whitespace-pre-wrap mt-2 md:mt-4">2. click<div className="font-bold text-gwc-darkblue"> ‘college & careers’</div></div>
                         <div className="flex whitespace-pre-wrap">3. <span className="text-gwc-darkblue font-bold">create</span> or <span className="text-gwc-darkblue font-bold">sign in</span> to your account</div>
