@@ -1,12 +1,32 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+
+function CopyEmailButton() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("girlswhocodeucf@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000); // resets after 2 seconds
+  };
+
+  return (
+    <button onClick={handleCopy} className="w-fit text-sm text-white hover:underline">
+      {copied ? "copied!" : "girlswhocodeucf@gmail.com"}
+    </button>
+  );
+}
 
 export default function Footer() {
   return (
     <footer className="w-full bg-gwc-darkblue text-white dark:text-zinc-300 py-10 mt-20">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col gap-8 sm:flex-row sm:justify-between sm:items-start">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 grid grid-cols-2 gap-x-4 gap-y-8 items-start sm:flex sm:flex-wrap sm:justify-center md:justify-between">
 
         {/* Left: Logo */}
+        <a href="/" className="hover:underline">
         <div>
           <Image
             src="/logo.png"
@@ -16,22 +36,23 @@ export default function Footer() {
             className="object-contain"
           />
         </div>
+        </a>
 
         {/* Left Middle: Navigation */}
         <div>
           <ul className="space-y-2 text-sm">
-            <li><a href="/calendar" className="hover:underline">calendar</a></li>
-            <li><a href="/join" className="hover:underline">become a member</a></li>
-            <li><a href="/gallery" className="hover:underline">gallery</a></li>
-            <li><a href="/links" className="hover:underline">links</a></li>
-            <li><a href="/team" className="hover:underline">our team</a></li>
+            <li><a href="/calendar" className="text-white hover:underline">calendar</a></li>
+            <li><a href="/join" className="text-white hover:underline">become a member</a></li>
+            <li><a href="/gallery" className="text-white hover:underline">gallery</a></li>
+            <li><a href="/links" className="text-white hover:underline">links</a></li>
+            <li><a href="/team" className="text-white hover:underline">our team</a></li>
           </ul>
         </div>
 
         {/* Right Middle: Social */}
         <div>
           <ul className="flex flex-row items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-            <li className="relative h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12">
+            <li className="relative h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12">
               <a href="https://www.linkedin.com/company/girls-who-code-ucf" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/images/linkedin-logo.png"
@@ -43,7 +64,7 @@ export default function Footer() {
                 />
               </a>
             </li>
-            <li className="relative h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12">
+            <li className="relative h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12">
               <a href="https://www.instagram.com/girlswhocodeucf" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/images/ig-logo.PNG"
@@ -55,7 +76,7 @@ export default function Footer() {
                 />
               </a>
             </li>
-            <li className="relative h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 rounded-lg overflow-hidden">
+            <li className="relative h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 rounded-lg overflow-hidden">
               <a href="https://discord.gg/yaWQ8wzTax" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/images/discord-logo.jpg"
@@ -71,14 +92,14 @@ export default function Footer() {
         </div>
         
         {/* Right: Contact */}
-        <div>
-        <Link
-          href="/contact"
-          className="hidden md:inline-flex items-center rounded-full bg-gwc-lightblue px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition"
-        >
-          contact
-        </Link>
-        <p>girlswhocodeucf@gmail.com<span className="font-medium pt-12 mt-8"></span></p>
+        <div className="flex flex-col gap-3 items-start justify-self-start">
+          <Link
+            href="/contact"
+            className="inline-flex w-fit items-center rounded-full bg-gwc-lightblue px-5 py-2 text-background text-sm font-medium hover:opacity-90 transition"
+          >
+            contact
+          </Link>
+          <CopyEmailButton />
         </div>
 
       </div>
