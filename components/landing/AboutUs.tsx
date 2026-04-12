@@ -9,7 +9,7 @@ export default function AboutUs() {
       <div className="relative w-full md:w-[45%] h-[250px] sm:h-[350px] md:h-auto shrink-0 p-4 md:p-6 lg:p-7">
         <div className="relative w-full h-full overflow-hidden rounded-2xl">
           <Image
-            src='/images/landing1_section2.png'
+            src='/images/landing1_section2.webp'
             alt="About us"
             fill
             className="object-cover"
@@ -34,7 +34,7 @@ export default function AboutUs() {
         
         <Link
           href="/join"
-          className="bg-[#1a2e6e] text-white px-10 py-4 rounded-xl text-lg font-medium tracking-wide hover:scale-105 transition-transform duration-200 shadow-lg"
+          className="self-center bg-gwc-darkblue text-white px-7 py-3 rounded-lg text-md tracking-wide hover:scale-105 transition-transform duration-200"
         >
           join the family!
         </Link>
