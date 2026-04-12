@@ -10,13 +10,22 @@ function CopyEmailButton() {
   const handleCopy = () => {
     navigator.clipboard.writeText("girlswhocodeucf@gmail.com");
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // resets after 2 seconds
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
-    <button onClick={handleCopy} className="w-fit text-sm text-white hover:underline">
-      {copied ? "copied!" : "girlswhocodeucf@gmail.com"}
-    </button>
+    <div className="relative">
+      <button onClick={handleCopy} className="w-fit text-sm text-white hover:underline">
+        girlswhocodeucf@gmail.com
+      </button>
+      <span
+        className={`absolute -bottom-8 left-1/2 -translate-x-1/2 bg-gwc-lightblue text-white text-xs px-2 py-1 rounded transition-opacity duration-300 ${
+          copied ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        copied!
+      </span>
+    </div>
   );
 }
 
