@@ -56,7 +56,7 @@ export default function Navbar() {
           <Link href="/calendar" className="hover:opacity-70 transition" onClick={() => setMenuOpen(false)}>calendar</Link>
           <Link href="/gallery" className="hover:opacity-70 transition" onClick={() => setMenuOpen(false)}>gallery</Link>
           <Link href="/links" className="hover:opacity-70 transition" onClick={() => setMenuOpen(false)}>links</Link>
-          <Link href="/ourteam" className="hover:opacity-70 transition" onClick={() => setMenuOpen(false)}>our team</Link>
+          <Link href="/team" className="hover:opacity-70 transition" onClick={() => setMenuOpen(false)}>our team</Link>
           <Link href="/join" className="hover:opacity-70 transition" onClick={() => setMenuOpen(false)}>join</Link>
           <Link
             href="/contact"

@@ -64,7 +64,7 @@ export default function Footer() {
             <li className="relative h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12">
               <a href="https://www.linkedin.com/company/girls-who-code-ucf" target="_blank" rel="noopener noreferrer">
                 <Image
-                  src="/images/linkedin-logo.PNG"
+                  src="/images/linkedin-logo.png"
                   alt="LinkedIn Logo"
                   fill
                   sizes="(max-width: 640px) 24px, (max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
