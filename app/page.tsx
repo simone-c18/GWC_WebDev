@@ -1,5 +1,6 @@
 import AboutUs from "@/components/landing/AboutUs";
 import Hero from "@/components/landing/Hero";
+import Merch from "@/components/landing/Merch";
 
 export default function Home() {
   return (
@@ -10,6 +11,9 @@ export default function Home() {
 
       {/* about us */}
       <AboutUs />
+
+      {/* merch */}
+      <Merch />
 
       {/* industry */}
       <div className="px-6 sm:px-10 md:px-16 lg:px-20">
