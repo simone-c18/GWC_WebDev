@@ -1,37 +1,35 @@
-/* industry */
-export default function Industry() {
+import Image from "next/image";
+
+export default function Industry2() {
   return (
-    <section className="w-full px-6 py-12 md:px-24 bg-white">
-      <div className="mx-auto max-w-7xl">
-        {/* Slightly smaller header scale */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-[#1a2e6e] max-w-3xl pb-4">
-          connect with real, industry professionals
-        </h2>
+    <section className="relative w-[95%] bg-white lg:min-h-[650px] max-w-7xl mx-auto rounded-2xl flex flex-col md:flex-row items-stretch overflow-hidden">
 
-        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[1fr_1.2fr]">
-          <div className="w-full">
-            {/* Moderate paragraph scale: maxes at 1.5rem (text-2xl) */}
-            <p className="text-lg md:text-xl lg:text-2xl text-gwc-darkblue leading-relaxed mb-4">
-              we bring the industry to you.
-            </p>
-            <p className="text-lg md:text-xl lg:text-2xl text-gwc-darkblue leading-relaxed">
-              through girls who code, members get the
-              chance to meet professionals, learn about different career paths, and
-              make connections that can open doors beyond the classroom.
-            </p>
-          </div>
+      {/* Text */}
+      <div className="flex flex-col items-center md:items-start justify-center text-center md:text-left px-6 sm:px-8 md:px-10 py-10">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl text-blue font-semibold leading-snug mb-6">
+          connect with real industry professionals
+        </h1>
+        <p className="text-base md:text-lg lg:text-xl text-blue mb-4">
+          through girls who code, members get the
+          chance to meet professionals, learn about different career paths, and
+          make connections that can open doors beyond the classroom.
+          from landing that first internship to mastering new frameworks, we are committed 
+          to cultivating a culture of technical excellence and radical inclusivity.
+        </p>
+      </div>
 
-          <div className="w-full">
-            <div className="overflow-hidden rounded-[2.5rem]">
-              <img
-                src="/images/microsoft_gbm.webp" 
-                alt="Girls Who Code meeting"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
+      {/* Image */}
+      <div className="relative w-full md:w-[45%] h-[250px] sm:h-[350px] md:h-auto shrink-0 p-4 md:p-6 lg:p-7">
+        <div className="relative w-full h-full overflow-hidden rounded-2xl">
+          <Image
+            src='/images/microsoft_gbm.webp'
+            alt="Industry professionals"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
+
     </section>
   );
 }
