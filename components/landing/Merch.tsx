@@ -6,10 +6,10 @@ export default function Merch() {
     <section className="relative w-[95%] bg-[#7b9fd1] lg:min-h-[700px] max-w-7xl mx-auto rounded-2xl flex flex-col md:flex-row items-stretch overflow-hidden">
 
       {/* Image */}
-      <div className="relative w-full md:w-[45%] h-[250px] sm:h-[350px] md:h-auto shrink-0 p-4 md:p-6 lg:p-7 xl:p-8">
+      <div className="relative w-full md:w-[67%] h-[150px] sm:h-[150px] md:h-auto shrink-0 p-4 md:p-6 lg:p-7 xl:p-8">
         <div className="relative w-full h-full overflow-hidden rounded-2xl">
           <Image
-            src='/images/gwc merch pic.png'
+            src='/images/gwcmerchupscaled.png'
             alt="Merch"
             fill
             className="object-cover"
