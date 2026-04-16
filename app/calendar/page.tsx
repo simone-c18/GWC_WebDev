@@ -5,7 +5,7 @@ import Script from 'next/script'
 
 export default function CalendarPage() {
   return (
-    <div className="min-h-screen bg-[linear-gradient(to_bottom,#ffffff_0%,#eef4fc_12.5%,#BCD1ED_25%,#eef4fc_37.5%,#ffffff_50%,#eef4fc_62.5%,#BCD1ED_75%,#eef4fc_87.5%,#ffffff_100%)] py-16 px-4 sm:px-6 lg:px-8 pt-32">
+    <div className=" min-h-screen py-16 px-4 sm:px-6 lg:px-8 pt-32">
       <div className="max-w-6xl mx-auto">
 
         {/* header */}
