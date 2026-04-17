@@ -39,7 +39,6 @@ export default function ContactPage() {
 
   return (
     <main className={`${alexandria.className} min-h-screen flex items-center justify-center px-6 pb-20 pt-28`}>
-    <main className={`${alexandria.className} min-h-screen flex items-center justify-center px-6 pb-20 pt-28`}>
       <div className="w-full max-w-2xl">
         
         <h1 className="text-4xl font-semibold text-[#081F5C] text-center tracking-tight mb-4 pt-10">
