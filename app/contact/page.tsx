@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Alexandria } from "next/font/google";
 
@@ -11,11 +11,16 @@ const alexandria = Alexandria({
 
 export default function ContactPage() {
   const form = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!form.current) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
 
     // --- CREDENTIALS ---
     const SERVICE_ID = "service_yw2ehaq"; 
@@ -27,11 +32,13 @@ export default function ContactPage() {
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then(
         () => {
-          alert("Message sent successfully!");
-          form.current?.reset(); 
+          setSubmitStatus("success");
+          form.current?.reset();
+          setIsSubmitting(false);
         },
         (error) => {
-          alert("Failed to send message. Please try again.");
+          setSubmitStatus("error");
+          setIsSubmitting(false);
           console.error("EmailJS Error:", error.text);
         }
       );
@@ -93,11 +100,34 @@ export default function ContactPage() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="rounded-full bg-[#081F5C] px-10 py-3 text-[#FFFFFF] font-medium hover:opacity-90 transition shadow-md"
+              disabled={isSubmitting}
+              className="rounded-full bg-[#081F5C] px-10 py-3 text-[#FFFFFF] font-medium hover:opacity-90 transition shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              submit
+              {isSubmitting ? (
+                <span className="flex items-center gap-2">
+                  <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                  </svg>
+                  sending...
+                </span>
+              ) : (
+                "submit"
+              )}
             </button>
           </div>
+
+          {submitStatus === "success" && (
+            <p className="text-white text-center text-sm font-medium mt-2">
+              message submitted! please allow 1-2 business days for a response ⋆˚꩜｡
+            </p>
+          )}
+
+          {submitStatus === "error" && (
+            <p className="text-red-200 text-center text-sm font-medium mt-2">
+              failed to send message. please try again.
+            </p>
+          )}
         </form>
       </div>
     </main>
