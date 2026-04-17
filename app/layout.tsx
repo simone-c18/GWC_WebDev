@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="bg-center md:bg-fixed bg-[url(/images/mobile_bg_2.webp)] lg:bg-[url(/images/background.webp)] bg-cover h-full lg:bg-opacity-0">
+        <div className="bg-center md:bg-fixed bg-[url(/images/mobile_bg_2.webp)] xl:bg-[url(/images/background.webp)] bg-cover h-full lg:bg-opacity-0">
           <Navbar />
           {children}
           </div>
