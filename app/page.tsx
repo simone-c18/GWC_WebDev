@@ -25,11 +25,9 @@ export default function Home() {
         
       </div>
 
-      {/* merch */}
       <div>
-        
+        <h3 className="text-lg sm:text-xl md:text-2xl text-gwc-darkblue font-semibold leading-snug mb-6">love, girls who code @ ucf ❤︎₊ ⊹</h3>
       </div>
-      
       
     </main>
     

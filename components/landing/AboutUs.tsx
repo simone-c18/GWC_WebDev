@@ -20,7 +20,7 @@ export default function AboutUs() {
       {/* Text */}
       <div className="flex flex-col items-center md:items-start justify-center text-center md:text-left px-6 sm:px-8 md:px-10 py-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl text-white font-semibold leading-snug mb-6">
-          about us
+          about us ౨ৎ⋆˚｡⋆
         </h1>
         <p className="text-base md:text-lg lg:text-xl text-white mb-4">
           our loop's mission is to create an inclusive space for women and non-binary individuals studying tech at UCF.
