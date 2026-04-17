@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,7 +48,7 @@ export default function Navbar() {
           className="md:hidden p-2 text-white"
           onClick={() => setMenuOpen(!menuOpen)}
         > 
-          {menuOpen ? "✕" : "☰"}
+          {menuOpen ? <IoClose size={29} color="white" /> : <GiHamburgerMenu size={29} color="white" />}
         </button>
       </div>
 
