@@ -6,10 +6,10 @@ export default function Industry2() {
 
       {/* Text */}
       <div className="flex flex-col items-center md:items-start justify-center text-center md:text-left px-6 sm:px-8 md:px-10 py-10">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl text-blue font-semibold leading-snug mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl text-gwc-darkblue font-semibold leading-snug mb-6">
           connect with real industry professionals
         </h1>
-        <p className="text-base md:text-lg lg:text-xl text-blue mb-4">
+        <p className="text-base md:text-lg lg:text-xl text-gwc-darkblue mb-4">
           through girls who code, members get the
           chance to meet professionals, learn about different career paths, and
           make connections that can open doors beyond the classroom.
