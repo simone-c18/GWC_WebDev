@@ -1,5 +1,6 @@
 import AboutUs from "@/components/landing/AboutUs";
 import Hero from "@/components/landing/Hero";
+import Merch from "@/components/landing/Merch";
 import Industry from "@/components/landing/Industry";
 
 export default function Home() {
@@ -15,6 +16,9 @@ export default function Home() {
 
       {/*Industry*/}
       <Industry />
+
+      {/* merch */}
+      <Merch />
 
       {/* testimonials */} 
       <div>

@@ -29,7 +29,7 @@ export default function CalendarPage() {
         <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
           <blockquote
             className="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/DVtG7hJDmdR/?utm_source=ig_embed&amp;utm_campaign=loading"
+            data-instgrm-permalink="https://www.instagram.com/p/DXHOzcBDozD/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
             style={{ maxWidth: '500px', width: '100%' }}
           />
