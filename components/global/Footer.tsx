@@ -27,6 +27,7 @@ export default function Footer() {
             <li><a href="/gallery" className="hover:underline">gallery</a></li>
             <li><a href="/links" className="hover:underline">links</a></li>
             <li><a href="/team" className="hover:underline">our team</a></li>
+            <li><a href="/credits" className="hover:underline">our web devs</a></li>
           </ul>
         </div>
 
