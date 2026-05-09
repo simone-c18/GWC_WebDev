@@ -52,11 +52,12 @@ export default function Footer() {
         {/* Left Middle: Navigation */}
         <div>
           <ul className="space-y-2 text-sm">
-            <li><a href="/calendar" className="text-white hover:underline">calendar</a></li>
-            <li><a href="/join" className="text-white hover:underline">become a member</a></li>
-            <li><a href="/gallery" className="text-white hover:underline">gallery</a></li>
-            <li><a href="/links" className="text-white hover:underline">links</a></li>
-            <li><a href="/team" className="text-white hover:underline">our team</a></li>
+            <li><a href="/calendar" className="hover:underline">calendar</a></li>
+            <li><a href="/join" className="hover:underline">become a member</a></li>
+            <li><a href="/gallery" className="hover:underline">gallery</a></li>
+            <li><a href="/links" className="hover:underline">links</a></li>
+            <li><a href="/team" className="hover:underline">our team</a></li>
+            <li><a href="/credits" className="hover:underline">our web devs</a></li>
           </ul>
         </div>
 
