@@ -1,44 +1,81 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const polaroids = [
-  { src: '/images/landing1_section1.webp', alt: 'Polaroid 1', className: 'top-6 right-16 -rotate-6' },
-  { src: '/images/landing2_section1.webp', alt: 'Polaroid 2', className: 'top-8 left-16 rotate-6' },
-  { src: '/images/landing3_section1.jpg',  alt: 'Polaroid 3', className: 'bottom-6 right-16 rotate-4' },
-  { src: '/images/landing4_section1.webp', alt: 'Polaroid 4', className: 'bottom-8 left-16 -rotate-4' },
+const collageImages = [
+  {
+    src: "/gallery/gallery13.webp",
+    alt: "Girls Who Code members smiling together",
+    className:
+      "right-0 top-0 h-[200px] w-[210px] sm:h-[230px] sm:w-[250px] lg:h-[260px] lg:w-[290px]",
+  },
+  {
+    src: "/gallery/gallery14.webp",
+    alt: "Girls Who Code members at an event",
+    className:
+      "bottom-0 left-0 h-[170px] w-[170px] sm:h-[190px] sm:w-[190px] lg:h-[220px] lg:w-[220px]",
+  },
 ];
 
 export default function Hero() {
   return (
-    <section className="relative w-[95%] max-w-7xl mx-auto min-h-[400px] sm:min-h-[500px] md:min-h-[650px] rounded-2xl flex items-center justify-center py-10 mt-10">
+    <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <div className="max-w-xl">
+          <div className="mb-5 inline-flex rounded-full border border-gwc-lightblue/15 bg-[#e9f0ff] px-4 py-1 text-[10px] font-semibold uppercase tracking-[0.26em] text-gwc-lightblue sm:text-xs">
+            girls who code at ucf
+          </div>
 
-      {/* Polaroids — hidden on mobile, visible md+ */}
-      {polaroids.map(({ src, alt, className }) => (
-        <div
-          key={alt}
-          className={`hidden md:block absolute bg-[#e8e8e6] pt-2 px-3 pb-14 shadow-[2px_4px_12px_rgba(0,0,0,0.15)] w-[220px] z-10 transition-transform duration-200 hover:scale-105 hover:z-20 ${className}`}
-        >
-          <div className="relative w-full h-[180px]">
-            <Image src={src} alt={alt} fill className="object-cover" />
+          <h1 className="font-alexandria text-4xl font-semibold leading-tight text-gwc-darkblue sm:text-5xl lg:text-[3.55rem] lg:leading-[1.05]">
+            we&apos;re on a mission to{" "}
+            <span className="text-gwc-lightblue">close the gender gap</span> in
+            tech
+          </h1>
+
+          <p className="mt-5 max-w-lg text-sm leading-7 text-gwc-darkblue/70 sm:text-base">
+            empowering women and non-binary students at UCF through a community
+            of technical excellence, professional growth, and radical
+            inclusivity.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="https://girlswhocode.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-md bg-gwc-darkblue px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(8,31,92,0.18)] transition hover:-translate-y-0.5 hover:bg-gwc-lightblue"
+            >
+              learn more
+            </Link>
+            <Link
+              href="/calendar"
+              className="inline-flex items-center rounded-md border border-gwc-lightblue/20 bg-white px-6 py-3 text-sm font-semibold text-gwc-lightblue transition hover:-translate-y-0.5 hover:border-gwc-lightblue/40"
+            >
+              view events
+            </Link>
           </div>
         </div>
-      ))}
 
-      {/* Center text */}
-      <div className="relative z-20 text-center px-6 md:px-56 lg:px-72">
-        <h1 className="text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-gwc-darkblue font-semibold leading-snug mb-6">
-          we're on a<br/>
-          mission to close<br/>
-          the <b>gender gap</b> in<br/>
-          tech
-        </h1>
-        <a
-          href="https://girlswhocode.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-gwc-darkblue text-white px-7 py-3 rounded-lg text-sm tracking-wide hover:scale-105 transition-transform duration-200"
-        >
-          learn more
-        </a>
+        <div className="relative mx-auto h-[300px] w-full max-w-[360px] sm:h-[360px] sm:max-w-[420px] lg:h-[420px] lg:max-w-[470px]">
+          <div className="absolute inset-x-10 bottom-8 top-14 rounded-[36px] bg-[#dce7fb]/70 blur-3xl" />
+
+          {collageImages.map(({ src, alt, className }) => (
+            <div
+              key={alt}
+              className={`absolute overflow-hidden rounded-2xl border border-white/80 bg-white p-2 shadow-[0_16px_40px_rgba(8,31,92,0.16)] ${className}`}
+            >
+              <div className="relative h-full w-full overflow-hidden rounded-[14px]">
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  sizes="(max-width: 640px) 210px, (max-width: 1024px) 250px, 290px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

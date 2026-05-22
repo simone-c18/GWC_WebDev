@@ -1,35 +1,64 @@
 import Image from "next/image";
+import { HiMiniBuildingOffice2, HiMiniSparkles } from "react-icons/hi2";
 
-export default function Industry2() {
+const stats = [
+  { value: "15+", label: "Guest Speakers Total" },
+  { value: "200+", label: "Active Members" },
+];
+
+export default function Industry() {
   return (
-    <section className="relative w-[95%] bg-white lg:min-h-[650px] max-w-7xl mx-auto rounded-2xl flex flex-col md:flex-row items-stretch overflow-hidden">
+    <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+        <div className="relative">
+          <div className="absolute -bottom-5 -left-3 h-24 w-24 -rotate-12 rounded-[1.6rem] bg-[#f1f3f8] shadow-[0_10px_30px_rgba(8,31,92,0.08)]" />
+          <div className="relative overflow-hidden rounded-[1.7rem] border border-white/80 bg-white p-2 shadow-[0_20px_50px_rgba(8,31,92,0.14)]">
+            <div className="relative aspect-[16/11] overflow-hidden rounded-[1.25rem]">
+              <Image
+                src="/images/microsoft_gbm.webp"
+                alt="Girls Who Code members connecting with industry professionals"
+                fill
+                sizes="(max-width: 1024px) 100vw, 560px"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
 
-      {/* Text */}
-      <div className="flex flex-col items-center md:items-start justify-center text-center md:text-left px-6 sm:px-8 md:px-10 py-10">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl text-gwc-darkblue font-semibold leading-snug mb-6">
-          connect with real industry professionals ⊹ ࣪ ˖₊˚⊹⋆
-        </h1>
-        <p className="text-base md:text-lg lg:text-xl text-gwc-darkblue mb-4">
-          through girls who code, members get the
-          chance to meet professionals, learn about different career paths, and
-          make connections that can open doors beyond the classroom.
-          from landing that first internship to mastering new frameworks, we are committed 
-          to cultivating a culture of technical excellence and radical inclusivity.
-        </p>
-      </div>
+        <div>
+          <div className="mb-4 flex items-center gap-3 text-gwc-lightblue">
+            <HiMiniBuildingOffice2 className="h-5 w-5" />
+            <HiMiniSparkles className="h-5 w-5" />
+          </div>
 
-      {/* Image */}
-      <div className="relative w-full md:w-[45%] h-[250px] sm:h-[350px] md:h-auto shrink-0 p-4 md:p-6 lg:p-7">
-        <div className="relative w-full h-full overflow-hidden rounded-2xl">
-          <Image
-            src='/images/microsoft_gbm.webp'
-            alt="Industry professionals"
-            fill
-            className="object-cover"
-          />
+          <h2 className="max-w-md font-alexandria text-3xl font-semibold leading-tight text-gwc-darkblue sm:text-4xl">
+            connect with real industry professionals
+          </h2>
+
+          <p className="mt-5 max-w-lg text-sm leading-7 text-gwc-darkblue/70 sm:text-base">
+            through girls who code, members get the chance to meet
+            professionals, learn about different career paths, and build
+            connections that can open doors beyond the classroom. it&apos;s a
+            space for mentorship, inspiration, and confidence-building.
+          </p>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-2xl border border-gwc-darkblue/8 bg-[#f7f8fb] px-5 py-4"
+              >
+                <div className="font-alexandria text-2xl font-semibold text-gwc-darkblue">
+                  {stat.value}
+                </div>
+                <div className="mt-1 text-xs uppercase tracking-[0.16em] text-gwc-darkblue/45">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-
     </section>
   );
 }

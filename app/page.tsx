@@ -5,32 +5,16 @@ import Industry from "@/components/landing/Industry";
 
 export default function Home() {
   return (
-
-    <main className="min-h-screen bg-white text-foreground flex flex-col items-center pt-28 gap-8 sm:gap-12 md:gap-16 lg:gap-24">
-
-      {/* hero */}
+    <main className="flex min-h-screen flex-col items-center gap-20 overflow-hidden bg-transparent px-0 pb-20 pt-32 text-foreground sm:gap-24 lg:gap-28 lg:pt-40">
       <Hero />
-
-      {/* about us */}
       <AboutUs />
-
-      {/*Industry*/}
       <Industry />
-
-      {/* merch */}
       <Merch />
-
-      {/* testimonials */} 
-      <div>
-        
+      <div className="px-4 text-center sm:px-6">
+        <h3 className="font-alexandria text-lg font-semibold text-gwc-darkblue sm:text-xl md:text-2xl">
+          love, girls who code @ ucf
+        </h3>
       </div>
-
-      <div>
-        <h3 className="text-lg sm:text-xl md:text-2xl text-gwc-darkblue font-semibold leading-snug mb-6">love, girls who code @ ucf ❤︎₊ ⊹</h3>
-      </div>
-      
     </main>
-    
   );
 }
-

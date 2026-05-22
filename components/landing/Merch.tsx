@@ -3,37 +3,44 @@ import Link from "next/link";
 
 export default function Merch() {
   return (
-    <section className="relative w-[95%] bg-[#7b9fd1] lg:min-h-[700px] max-w-7xl mx-auto rounded-2xl flex flex-col md:flex-row items-stretch overflow-hidden">
+    <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="rounded-[2rem] bg-[#e3ebfb] px-6 py-10 shadow-[0_18px_60px_rgba(8,31,92,0.08)] sm:px-8 md:px-10 lg:px-14 lg:py-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
+          <div className="relative">
+            <div className="absolute inset-x-12 bottom-6 top-12 rounded-full bg-white/60 blur-3xl" />
+            <div className="relative mx-auto aspect-[4/3] w-full max-w-[520px] lg:max-w-[580px]">
+              <Image
+                src="/images/gwcmerchupscaled.png"
+                alt="Girls Who Code UCF merch"
+                fill
+                sizes="(max-width: 1024px) 100vw, 580px"
+                className="object-contain"
+              />
+            </div>
+          </div>
 
-      {/* Image */}
-      <div className="relative w-full md:w-[45%] h-[250px] sm:h-[350px] md:h-auto shrink-0 p-4 md:p-6 lg:p-7">
-        <div className="relative w-full h-full overflow-hidden rounded-2xl">
-          <Image
-            src='/images/gwcmerchupscaled.png'
-            alt="Merch"
-            fill
-            className="object-cover"
-          />
+          <div className="text-center lg:text-left">
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-gwc-lightblue/75">
+              designed with pride
+            </p>
+            <h2 className="font-alexandria text-3xl font-semibold leading-tight text-gwc-darkblue sm:text-4xl lg:text-[2.7rem]">
+              merch by us, for you
+            </h2>
+            <p className="mx-auto mt-5 max-w-md text-sm leading-7 text-gwc-darkblue/70 sm:text-base lg:mx-0">
+              support UCF&apos;s girls who code through stickers, sweaters, and
+              more!
+            </p>
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdrsTA0wyEK27GAf3yfECBmk5DtUCPHIzREzUgEnXbORAMWdQ/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center rounded-md bg-gwc-darkblue px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-gwc-lightblue"
+            >
+              purchase
+            </Link>
+          </div>
         </div>
       </div>
-
-      {/* Text */}
-      <div className="flex flex-col items-center md:items-start justify-center text-center md:text-left px-6 sm:px-8 md:px-10 py-10">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl text-white font-semibold leading-snug mb-6">
-          merch by us, 
-          for you ᰔ‧₊˚⊹ <br/>
-        </h1>
-        <p className="text-base md:text-lg lg:text-xl text-white mb-8">
-          support ucf's girls who code through stickers, sweaters, and more!
-        </p>
-        <Link
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdrsTA0wyEK27GAf3yfECBmk5DtUCPHIzREzUgEnXbORAMWdQ/viewform"
-          className="self-center bg-gwc-darkblue text-white px-7 py-3 rounded-lg text-md tracking-wide hover:scale-105 transition-transform duration-200"
-        >
-          purchase
-        </Link>
-      </div>
-
     </section>
   );
 }
