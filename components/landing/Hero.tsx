@@ -21,9 +21,6 @@ export default function Hero() {
     <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div className="max-w-xl">
-          <div className="mb-5 inline-flex rounded-full border border-gwc-lightblue/15 bg-[#e9f0ff] px-4 py-1 text-[10px] font-semibold uppercase tracking-[0.26em] text-gwc-lightblue sm:text-xs">
-            girls who code at ucf
-          </div>
 
           <h1 className="font-alexandria text-4xl font-semibold leading-tight text-gwc-darkblue sm:text-5xl lg:text-[3.55rem] lg:leading-[1.05]">
             we&apos;re on a mission to{" "}
