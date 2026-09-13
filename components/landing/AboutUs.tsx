@@ -9,9 +9,6 @@ export default function AboutUs() {
           <h2 className="font-alexandria text-2xl font-semibold text-gwc-darkblue sm:text-3xl">
             about us
           </h2>
-          <p className="mt-2 text-sm uppercase tracking-[0.28em] text-gwc-lightblue/75">
-            inclusive, ambitious, and student-led
-          </p>
         </div>
 
         <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
