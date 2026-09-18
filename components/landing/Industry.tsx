@@ -26,10 +26,6 @@ export default function Industry() {
         </div>
 
         <div>
-          <div className="mb-4 flex items-center gap-3 text-gwc-lightblue">
-            <HiMiniBuildingOffice2 className="h-5 w-5" />
-            <HiMiniSparkles className="h-5 w-5" />
-          </div>
 
           <h2 className="max-w-md font-alexandria text-3xl font-semibold leading-tight text-gwc-darkblue sm:text-4xl">
             connect with real industry professionals
