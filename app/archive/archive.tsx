@@ -1,115 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { BOARD_YEARS, TeamMember } from "@/app/team/teamData";
 
-interface TeamMember {
-  id: number;
-  name: string;
-  role: string;
-  image: string;
-  linkedin?: string;
-}
-
-const teamMembers: TeamMember[] = [
-  {
-    id: 1,
-    name: "Shianne Wood",
-    role: "President",
-    image: "/images/25-26_team/shai_team.png",
-    linkedin: "https://www.linkedin.com/in/shianne-wood/",
-  },
-  {
-    id: 2,
-    name: "Vianna Huynh",
-    role: "Vice President",
-    image: "/images/25-26_team/vianna_team.png",
-    linkedin: "https://www.linkedin.com/in/viannahuynh/",
-  },
-  {
-    id: 3,
-    name: "Adema Berdenova",
-    role: "Secretary",
-    image: "/images/25-26_team/adema_team.png",
-    linkedin: "https://www.linkedin.com/in/adema-berdenova/",
-  },
-  {
-    id: 4,
-    name: "Ayla Tristao",
-    role: "Treasurer",
-    image: "/images/25-26_team/ayla_team.png",
-    linkedin: "https://www.linkedin.com/in/ayla-tristao/",
-  },
-  {
-    id: 5,
-    name: "Madeleine Haddad",
-    role: "Sponsorship Chair",
-    image: "/images/25-26_team/madeleine_team.png",
-    linkedin: "https://www.linkedin.com/in/madeleine-ghaddad/",
-  },
-  {
-    id: 6,
-    name: "Shealyn Rodriguez",
-    role: "Social Media",
-    image: "/images/25-26_team/shea_team.webp",
-    linkedin: "https://www.linkedin.com/in/shealyn-rodriguez-a3965b294/",
-  },
-  {
-    id: 7,
-    name: "Sophia Vignali",
-    role: "Event Coordinator",
-    image: "/images/25-26_team/sophia_team.webp",
-    linkedin: "https://www.linkedin.com/in/sophia-vignali-4081ab325/",
-  },
-  {
-    id: 8,
-    name: "Michelle John",
-    role: "Event Coordinator",
-    image: "/images/25-26_team/michelle_team.webp",
-    linkedin: "https://www.linkedin.com/in/michelle-john-2b2667392/",
-  },
-  {
-    id: 9,
-    name: "Britni Barcelo",
-    role: "Workshop Director",
-    image: "/images/25-26_team/britni_team.webp",
-    linkedin: "https://www.linkedin.com/in/britnibarcelo/",
-  },
-  {
-    id: 10,
-    name: "Simone Chrastek",
-    role: "Workshop Director",
-    image: "/images/25-26_team/simone_team.webp",
-    linkedin: "https://www.linkedin.com/in/simone-chrastek/",
-  },
-  {
-    id: 11,
-    name: "Adriana Lee-Fook",
-    role: "Workshop Director",
-    image: "/images/25-26_team/adriana_team.jpg",
-    linkedin: "https://www.linkedin.com/in/adriana-lee-fook/",
-  },
-  {
-    id: 12,
-    name: "Reese Odvina",
-    role: "Graphic Designer",
-    image: "/images/25-26_team/reese_team.webp",
-    linkedin: "https://www.linkedin.com/in/reese-odvina/",
-  },
-  {
-    id: 13,
-    name: "Tanishqa Sahay",
-    role: "Graphic Designer",
-    image: "/images/25-26_team/tanishqa_team.webp",
-    linkedin: "https://www.linkedin.com/in/tanishqa-sahay/",
-  },
-  {
-    id: 14,
-    name: "Isabella Austin",
-    role: "Graphic Designer",
-    image: "/images/25-26_team/izzy_team.webp",
-    linkedin: "https://www.linkedin.com/in/isabellaaustin/",
-  },
-];
+const teamMembers: TeamMember[] =
+  BOARD_YEARS.find((b) => b.id === "25-26")?.members ?? [];
 
 export default function Team() {
   // Separate leadership from other members
@@ -127,7 +22,6 @@ export default function Team() {
       member.name
     )}`;
 
-  
   const TeamCard = ({ member }: { member: TeamMember }) => (
     <a
       href={getLinkedInUrl(member)}
@@ -159,11 +53,10 @@ export default function Team() {
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 pt-32">
       <div className="max-w-6xl mx-auto">
-
         {/* Title */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gwc-darkblue mb-4 mt-10">
-            '25–26 board
+            &apos;25–26 board
           </h1>
         </div>
 
@@ -180,7 +73,6 @@ export default function Team() {
             <TeamCard key={member.id} member={member} />
           ))}
         </div>
-
       </div>
     </div>
   );
