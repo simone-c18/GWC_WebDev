@@ -1,26 +1,142 @@
 {
-    "gallery1.webp": "Simone during the Intro to Figma Workshop, Fall 2025.",
-    "gallery2.webp": "Shai, Shealyn and Britni during a Social.",
-    "gallery3.webp": "Girls Who Code members during the Jewelry Social, Fall 2025.",
-    "gallery4.webp": "Girls Who Code members during the Jewelry Social, Fall 2025.",
-    "gallery5.webp": "Girls Who Code members during the Computer Vision Workshop, Fall 2025.",
-    "gallery6.webp": "Girls Who Code Tan-Cha Social after GBM #2, Spring 2026",
-    "gallery7.webp": "Winners of activity during GBM #1, Spring 2026",
-    "gallery8.webp": "Group picture of Girls Who Code members after Project Presentations, Fall 2025.",
-    "gallery9.webp": "Girls Who Code board members pictured with guest speaker from Universal, Victoria Conley. Fall, 2025.",
-    "gallery10.webp": "Girls Who Code members during a Social.",
-    "gallery11.webp": "Girls Who Code board members during Dress To Impress Social, Fall 2025.",
-    "gallery12.webp": "Girls Who Code members during GBM #2 pictured with Universal Studios freebies, Fall 2025.",
-    "gallery13.webp": "Girls Who Code members during our Galentine's Social, Spring 2026.",
-    "gallery14.webp": "Flower crown social",
-    "gallery15.webp": "Jewelry making social",
-    "gallery16.webp": "GBM with guest speaker from IBM!",
-    "gallery17.webp": "Simone's Standout tech resumes workshop with BNY!",
-    "gallery18.webp": "Reese, Simone, and Shai repping GWC on the Knight Vision podcast!",
-    "gallery19.webp": "GBM with guest speaker from Apple!",
-    "gallery20.webp": "Adriana's workshop on certificates in Cybersecurity",
-    "gallery21.webp": "Members during a jewelry making social",
-    "gallery22.webp": "Board bonding event at Keg Social!",
-    "gallery23.png": "Girls Who Code wins Best Academic RSO at 2025-2026 Impact Awards :D",
-    "gallery24.webp": "Adriana's workshop on Intro to Cybersecurity"
+  "20260915_185955.jpg": {
+    "caption": "Fall 2026, GBM #1",
+    "date": "2026-09-15"
+  },
+  "DSC04534.jpg": {
+    "caption": "",
+    "date": "2026-04-15"
+  },
+  "DSC04765.jpg": {
+    "caption": "",
+    "date": "2026-03-15"
+  },
+  "DSC04777.jpg": {
+    "caption": "",
+    "date": "2026-03-15"
+  },
+  "DSCN0137.jpg": {
+    "caption": "Fall 2026, GBM #1",
+    "date": "2026-09-15"
+  },
+  "gallery1.webp": {
+    "caption": "Simone during the Intro to Figma Workshop, Fall 2025.",
+    "date": "2025-10-01"
+  },
+  "gallery2.webp": {
+    "caption": "Shai, Shealyn and Britni during a Social.",
+    "date": "2026-02-01"
+  },
+  "gallery3.webp": {
+    "caption": "Girls Who Code members during the Jewelry Social, Fall 2025.",
+    "date": "2025-11-01"
+  },
+  "gallery4.webp": {
+    "caption": "Girls Who Code members during the Jewelry Social, Fall 2025.",
+    "date": "2025-11-01"
+  },
+  "gallery5.webp": {
+    "caption": "girls Who Code members during the Computer Vision Workshop, Fall 2025.",
+    "date": "2025-10-01"
+  },
+  "gallery6.webp": {
+    "caption": "Girls Who Code Tan-Cha Social after GBM #2, Spring 2026.",
+    "date": "2026-02-01"
+  },
+  "gallery7.webp": {
+    "caption": "Winners of activity during GBM #1, Spring 2026",
+    "date": "2026-01-20"
+  },
+  "gallery8.webp": {
+    "caption": "Group picture of Girls Who Code members after Project Presentations, Fall 2025.",
+    "date": "2025-10-01"
+  },
+  "gallery9.webp": {
+    "caption": "Girls Who Code board members pictured with guest speaker from Universal, Victoria Conley. Fall, 2025.",
+    "date": "2025-09-01"
+  },
+  "gallery10.webp": {
+    "caption": "Girls Who Code members during a Social.",
+    "date": "2026-02-01"
+  },
+  "gallery11.webp": {
+    "caption": "Girls Who Code board members during Dress To Impress Social, Fall 2025.",
+    "date": "2025-10-25"
+  },
+  "gallery12.webp": {
+    "caption": "Girls Who Code members during GBM #2 pictured with Universal Studios freebies, Fall 2025.",
+    "date": "2025-10-01"
+  },
+  "gallery13.webp": {
+    "caption": "Girls Who Code members during our Galentine's Social, Spring 2026.",
+    "date": "2026-02-01"
+  },
+  "gallery14.webp": {
+    "caption": "Flower crown social",
+    "date": "2026-03-01"
+  },
+  "gallery15.webp": {
+    "caption": "Jewelry making social",
+    "date": "2026-03-15"
+  },
+  "gallery16.webp": {
+    "caption": "GBM with guest speaker from IBM!",
+    "date": "2026-04-01"
+  },
+  "gallery17.webp": {
+    "caption": "Simone's Standout tech resumes workshop with BNY!",
+    "date": "2026-04-15"
+  },
+  "gallery18.webp": {
+    "caption": "Reese, Simone, and Shai repping GWC on the Knight Vision podcast!",
+    "date": "2026-04-01"
+  },
+  "gallery19.webp": {
+    "caption": "GBM with guest speaker from Apple!",
+    "date": "2026-03-15"
+  },
+  "gallery20.webp": {
+    "caption": "Adriana's workshop on certificates in Cybersecurity",
+    "date": "2026-03-01"
+  },
+  "gallery21.webp": {
+    "caption": "Members during a jewelry making social",
+    "date": "2026-03-15"
+  },
+  "gallery22.webp": {
+    "caption": "Board bonding event at Keg Social!",
+    "date": "2026-04-30"
+  },
+  "gallery23.png": {
+    "caption": "Girls Who Code wins Best Academic RSO at 2025-2026 Impact Awards :D",
+    "date": "2026-04-30"
+  },
+  "gallery24.webp": {
+    "caption": "Adriana's workshop on Intro to Cybersecurity.",
+    "date": "2026-04-01"
+  },
+  "IMG_0333.jpg": {
+    "caption": "Girls Who Code E-Boards, 25-26 and 26-27.",
+    "date": "2026-05-01"
+  },
+  "IMG_2044.jpg": {
+    "caption": "Intro to Git Workshop, Fall 2026.",
+    "date": "2026-09-22"
+  },
+  "IMG_4153.jpg": {
+    "caption": "Girls Who Code Banquet, Spring 2026.",
+    "date": "2026-04-30"
+  },
+  "IMG_4624.jpg": {
+    "caption": "GWC Members at Vision Board Social, Fall 2026.",
+    "date": "2026-09-17"
+  },
+  "IMG_5158.jpg": {
+    "caption": "CD Decorating Social, Fall 2026.",
+    "date": "2026-09-24"
+  },
+  "IMG_7028.jpg": {
+    "caption": "GWC Members at Vision Board Social, Fall 2026.",
+    "date": "2026-09-17"
+  }
 }
