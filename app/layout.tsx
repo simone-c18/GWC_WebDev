@@ -29,14 +29,14 @@ export default function RootLayout({
 {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="bg-center md:bg-fixed bg-[url(/images/mobile_bg_2.webp)] xl:bg-[url(/images/background.webp)] bg-cover h-full lg:bg-opacity-0">
+            <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col`}>
+        <div className="flex flex-1 flex-col bg-center md:bg-fixed bg-[url(/images/mobile_bg_2.webp)] xl:bg-[url(/images/background.webp)] bg-cover lg:bg-opacity-0">
           <Navbar />
-          {children}
-          </div>
-          <Footer />
-          <Analytics />
+          <div className="flex-1">{children}</div>
+        </div>
+        <Footer />
+        <Analytics />
       </body>
     </html>
   );

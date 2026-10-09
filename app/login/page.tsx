@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase-client';
+import Image from "next/image";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -44,16 +45,19 @@ export default function LoginPage() {
     }
   }
 
-  return (
-    <main className="flex min-h-screen items-center justify-center bg-gray-50 px-4">
+    return (
+    <main className="flex min-h-[60vh] items-center justify-center px-4 pb-16 pt-36">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-sm space-y-4 rounded-lg bg-white p-6 shadow"
+        className="w-full max-w-sm space-y-5 rounded-2xl border border-gwc-lightblue/30 bg-gwc-lightblue/20 p-8 shadow-lg"
       >
-        <h1 className="text-xl font-semibold text-gray-900">Admin Login</h1>
+        <div className="flex flex-col items-center gap-3">
+          <Image src="/logo.png" alt="Girls Who Code UCF" width={120} height={40} className="object-contain" />
+          <h1 className="text-xl font-semibold text-gwc-darkblue">admin login</h1>
+        </div>
 
         <div className="space-y-1">
-          <label htmlFor="email" className="text-sm text-gray-700">Email</label>
+          <label htmlFor="email" className="text-sm text-gwc-darkblue">email</label>
           <input
             id="email"
             type="email"
@@ -61,12 +65,12 @@ export default function LoginPage() {
             autoComplete="username"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded border border-gray-300 px-3 py-2 text-gray-900"
+            className="w-full rounded-lg border border-gwc-lightblue/50 bg-white px-3 py-2 text-gwc-darkblue outline-none focus:border-gwc-lightblue focus:ring-2 focus:ring-gwc-lightblue/40"
           />
         </div>
 
         <div className="space-y-1">
-          <label htmlFor="password" className="text-sm text-gray-700">Password</label>
+          <label htmlFor="password" className="text-sm text-gwc-darkblue">password</label>
           <input
             id="password"
             type="password"
@@ -74,7 +78,7 @@ export default function LoginPage() {
             autoComplete="current-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full rounded border border-gray-300 px-3 py-2 text-gray-900"
+            className="w-full rounded-lg border border-gwc-lightblue/50 bg-white px-3 py-2 text-gwc-darkblue outline-none focus:border-gwc-lightblue focus:ring-2 focus:ring-gwc-lightblue/40"
           />
         </div>
 
@@ -83,9 +87,9 @@ export default function LoginPage() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full rounded bg-black px-4 py-2 text-white disabled:opacity-50"
+          className="w-full rounded-full bg-gwc-lightblue px-5 py-2 text-sm font-medium text-background transition hover:opacity-90 disabled:opacity-50"
         >
-          {loading ? 'Signing in...' : 'Sign in'}
+          {loading ? "signing in..." : "sign in"}
         </button>
       </form>
     </main>
