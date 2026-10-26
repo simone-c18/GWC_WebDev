@@ -10,8 +10,12 @@ interface Photo {
   caption: string;
 }
 
+const SHOW_CAPTIONS = false; // Flip to turn captions on or off
+
 export default function GalleryClient({ initialPhotos }: { initialPhotos: Photo[] }) {
-  const [photos] = useState<Photo[]>(initialPhotos);
+  const [photos] = useState<Photo[]>(
+  SHOW_CAPTIONS ? initialPhotos : initialPhotos.map((p) => ({ ...p, caption: "" }))
+  );
   const [expanded, setExpanded] = useState<Photo | null>(null);
 
   return (
@@ -33,17 +37,21 @@ export default function GalleryClient({ initialPhotos }: { initialPhotos: Photo[
                 alt={photo.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition-all duration-500 group-hover:blur-sm"
+                className={`object-cover transition-all duration-500 ${
+                  photo.caption ? "group-hover:blur-sm" : ""
+                }`}
                 loading="lazy"
               />
 
-              {/* Color overlay */}
-              <div className="absolute inset-0 bg-[#7b9fd1] opacity-0 group-hover:opacity-40 transition-opacity duration-500" />
-
-              {/* Caption */}
-              <div className="absolute inset-0 flex items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <p className="text-white font-semibold">{photo.caption}</p>
-              </div>
+              {/* Color overlay + caption (only when a caption exists) */}
+              {photo.caption && (
+                <>
+                  <div className="absolute inset-0 bg-[#7b9fd1] opacity-0 group-hover:opacity-40 transition-opacity duration-500" />
+                  <div className="absolute inset-0 flex items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <p className="text-white font-semibold">{photo.caption}</p>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         ))}
@@ -78,8 +86,10 @@ export default function GalleryClient({ initialPhotos }: { initialPhotos: Photo[
               />
             </div>
 
-            {/* Caption */}
-            <p className="text-center font-semibold text-gray-800">{expanded.caption}</p>
+            {/* Caption (only when one exists) */}
+            {expanded.caption && (
+              <p className="text-center font-semibold text-gray-800">{expanded.caption}</p>
+            )}
           </div>
         </div>
       )}
