@@ -118,7 +118,15 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="mt-10 border-t border-zinc-300 dark:border-zinc-700 pt-4 text-center text-xs">
-        © {new Date().getFullYear()} Girls Who Code UCF. All rights reserved.
+        <Link
+          href="/login"
+          prefetch={false}
+          aria-label="Admin login"
+          className="cursor-text text-inherit no-underline hover:no-underline"
+        >
+          ©
+        </Link>{" "}
+        {new Date().getFullYear()} Girls Who Code UCF. All rights reserved.
       </div>
     </footer>
     </div>
