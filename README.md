@@ -20,6 +20,23 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Admin login (Firebase)
+
+The `/admin` dashboard is protected by Firebase Authentication. It's reachable from the hidden link on the © in the footer, or directly at `/login`.
+
+1. Copy `.env.example` to `.env.local` and fill in the values from the GWC Firebase project. Comments in the file say where each value comes from.
+2. In the Firebase console, add the user under **Authentication → Users**.
+3. Set `ADMIN_EMAIL` in `.env.local` to that user's email, then run:
+
+   ```bash
+   npm run set-admin
+   ```
+
+   This sets the `admin` custom claim. Accounts without the claim are rejected at login.
+4. In production, the same `NEXT_PUBLIC_FIREBASE_*` and `FIREBASE_SA` variables must be set in Vercel → Settings → Environment Variables.
+
+Sessions last 8 hours. Logging out revokes the session on the server.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
